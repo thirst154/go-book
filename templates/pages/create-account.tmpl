@@ -1,0 +1,63 @@
+<div class="center">
+  <style>
+    .loginBox {
+      width: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .loginBox form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .loginBox h1 {
+      margin: 0;
+      padding-bottom: 15px;
+    }
+
+    .loginBox div {
+      display: flex;
+      width: auto;
+    }
+  </style>
+  <div class="loginBox">
+    <h1>Create Account</h1>
+    <form>
+      <div>
+        <input type="text" placeholder="First Name" name="firstname" required />
+        <input type="text" placeholder="Last Name" name="lastname" required />
+      </div>
+
+      <input
+        type="text"
+        placeholder="Username"
+        id="username"
+        name="username"
+        required
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        id="email"
+        name="email"
+        required
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        id="password"
+        name="password"
+        required
+      />
+      <button class="btn-primary">Create Account</button>
+    </form>
+    <button class="link" hx-get="/pages/login" hx-target="#content">
+      Usea an account already created
+    </button>
+  </div>
+</div>

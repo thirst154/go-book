@@ -1,0 +1,55 @@
+{{define "styles"}}
+
+<style>
+  :root {
+    --primary-color: #047857;
+    --primary-color-dark: #065f46;
+    --primary-text: white;
+  }
+
+  button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #f1f1f1;
+  }
+
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color-dark);
+    color: var(--primary-text);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--primary-color-dark);
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .link {
+    text-decoration: underline;
+    color: var(--primary-color);
+    border: none;
+    padding: 1px;
+  }
+
+  .link:hover {
+    background-color: white;
+  }
+</style>
+
+{{ end }}
