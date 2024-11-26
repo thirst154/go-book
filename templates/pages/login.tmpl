@@ -1,0 +1,48 @@
+<div class="center">
+  <style>
+    .loginBox {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .loginBox form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .loginBox h1 {
+      margin: 0;
+      padding-bottom: 15px;
+    }
+
+    .loginBox .link {
+      margin: 0 auto;
+    }
+  </style>
+  <div class="loginBox">
+    <h1>Login</h1>
+    <form>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Passsword"
+        required
+      />
+      <button class="btn-primary">Login</button>
+    </form>
+    <button class="link" hx-get="/pages/create-account" hx-target="#content">
+      Create and account
+    </button>
+  </div>
+</div>
