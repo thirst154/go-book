@@ -16,9 +16,13 @@ func main() {
 	pages := r.Group("/pages")
 
 	pages.GET("/", controllers.GetIndex)
+	r.GET("/", controllers.GetIndex)
+
 	pages.GET("/login", controllers.GetLoginComponent)
 	pages.GET("/create-account", controllers.GetCreateAccountComponent)
 	pages.GET("/greeting", controllers.GetGreetingComponent)
+	pages.GET("/posts", controllers.GetPosts)
+
 
 	api := r.Group("/api")
 

@@ -1,0 +1,56 @@
+<div>
+
+    <style>
+        form{
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input{
+            border: none;
+            padding-bottom: 100px;
+        }
+
+        form button{
+            width: auto;
+            border-radius: 3px;
+        }
+
+        .messages{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message{
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .message h2{
+            padding: 0;
+            margin: 0;
+        }
+        
+    </style>
+
+    <h1>Posts</h1>
+
+    <form>
+        <input type="text" placeholder="Message...">
+        <button class="btn-primary">Send ✉</button>
+    </form>
+
+    <div class="messages">
+        <h1> Your Messages </h1>
+    {{range .Messages}}
+        <div class="message">
+            <h2> {{.Title}}</h2>
+            <p> {{.Content}}</p>
+        </div>
+    {{end}}
+    </div>
+</div>

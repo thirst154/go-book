@@ -20,3 +20,22 @@ func GetGreetingComponent(c *gin.Context) {
 func GetCreateAccountComponent(c *gin.Context) {
 	c.HTML(200, "create-account.tmpl", gin.H{})
 }
+
+type Message struct {
+	Title   string
+	Content string
+}
+
+type Messages []Message
+
+func GetPosts(c *gin.Context) {
+
+	content := Messages{
+		Message{Title: "Hello World", Content: "Hello Again"},
+		Message{Title: "Hello Tom!", Content: "123123123123123123123123123123123123123123123123"},
+		Message{Title: "Test Test", Content: "Hello"},
+		Message{Title: "Hello World", Content: "Hello Again AND AgainAgainAgainAgainAgainAgainAgainAgain"},
+	}
+
+	c.HTML(200, "posts.tmpl", gin.H{"Messages": content})
+}
