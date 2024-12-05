@@ -1,56 +1,81 @@
 <div>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
 
-    <style>
-        form{
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-        }
+      border: 1px solid #ddd;
+      border-radius: 10px;
 
-        form input{
-            border: none;
-            padding-bottom: 100px;
-        }
+      padding: 10px;
+    }
 
-        form button{
-            width: auto;
-            border-radius: 3px;
-        }
+    form input,
+    textarea {
+      border: none;
+      display: flex;
+      align-items: start;
+    }
 
-        .messages{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+    form input:focus,
+    textarea:focus {
+      outline: none;
+    }
 
-        .message{
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-        }
+    textarea {
+      padding-bottom: 70px;
+      text-wrap: wrap;
+      font-family: "Barlow", sans-serif;
+    }
 
-        .message h2{
-            padding: 0;
-            margin: 0;
-        }
-        
-    </style>
+    input {
+      font-weight: bold;
+    }
 
-    <h1>Posts</h1>
+    .titleInput {
+      border-bottom: 1px solid #ddd;
+    }
 
-    <form>
-        <input type="text" placeholder="Message...">
-        <button class="btn-primary">Send ✉</button>
-    </form>
+    form div {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-    <div class="messages">
-        <h1> Your Messages </h1>
-    {{range .Messages}}
-        <div class="message">
-            <h2> {{.Title}}</h2>
-            <p> {{.Content}}</p>
-        </div>
-    {{end}}
+    .messages {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .message {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .message h2 {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+
+  <h1>Posts</h1>
+
+  <form>
+    <input type="text" placeholder="Title..." class="titleInput" />
+    <textarea type="text" placeholder="Message" class="messageInput"></textarea>
+    <div>
+      <button>Send</button>
     </div>
+  </form>
+
+  <div class="messages">
+    <h1>Your Messages</h1>
+    {{ range.Messages }}
+    <div class="message">
+      <h2>{{.Title}}</h2>
+      <p>{{.Content}}</p>
+    </div>
+    {{ end }}
+  </div>
 </div>

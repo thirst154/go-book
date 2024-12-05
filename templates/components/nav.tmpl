@@ -3,13 +3,15 @@
 <div>
   <style>
     nav {
+      width: 55%;
+      margin: 10px auto;
       border: 1px solid #ddd;
+      border-radius: 10px;
       margin-bottom: 10px;
     }
 
     nav div {
-      width: 55%;
-      margin: 0 auto;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
     }
@@ -36,6 +38,10 @@
       color: #333;
     }
 
+    h1 {
+      text-wrap: none;
+    }
+
     .login a {
       color: blue;
       font-weight: bold;
@@ -48,9 +54,9 @@
         <li>
           <button hx-get="/pages/greeting" hx-target="#content">Home</button>
         </li>
-        <li><button 
-          hx-get="/pages/posts"
-          hx-target="#content">About</button></li>
+        <li>
+          <button hx-get="/pages/posts" hx-target="#content">About</button>
+        </li>
         <li><button>Contact</button></li>
       </ul>
       <ul>
